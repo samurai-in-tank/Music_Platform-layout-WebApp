@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+	font-family: '-apple-system', 'Arial', sans-serif;
+	font-size: calc(14px + 0.3vw);
+	color: #8a8a8a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+p {
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+    color: #8099D0;
+    text-decoration: none;
+}
+
+.page-header {
+	background-color: grey;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #fff;
+}
+
+.container {
+	justify-content: center;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.title {
+	font-size: 1.5rem;
+	margin: 15px 0px;	
+}
+
+.main-section {
+	padding: 30px 30px;
+}
+
+.menu {
+	margin-bottom: 20px;
+	list-style-type: circle;
+	list-style-position: inside;
+}
+
+.menu-item{
+
+}
+
+.menu-item__link{
+
+}
+
+.text {
+	padding: 10px 0px;
+}
+
+.page-footer {
+	background-color: grey;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-text{
+	color: #fff;
+}
