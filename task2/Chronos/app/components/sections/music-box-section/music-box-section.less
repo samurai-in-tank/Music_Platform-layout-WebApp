@@ -2,8 +2,64 @@
     &-section{
         background-color: @body-color;
     }
+
     display: grid;
+    padding: @padding-middle 0px;
     gap: @padding-middle;
     grid-template-columns: repeat(auto-fit, minmax(250px, 420px));
     
+    &__item{
+        position: relative;
+        background: #fff;
+        padding: @padding-middle;
+
+        &-img{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+        }
+        &-title{
+            padding-top: @padding-middle;
+            padding-bottom: @padding-small;
+        }
+        &-footer{
+            padding-top: @padding-huge;
+            &__people{
+                padding-bottom: @padding-small;
+            }
+            &__music{
+                display: grid;
+                align-items: center;
+                gap: @padding-middle;
+                grid-template-columns: 0.1fr 1fr;
+                &-button{
+                    border: none;
+                    background: none;
+                    width: 40px;
+                    height: 40px;
+                }
+                &-audio{
+                    display: grid;
+                    grid-template-columns: 1fr 0.5fr;
+                    border-radius: 10px;
+                    border: 2px solid @inactive-color;
+                    background: @accent2-color;
+                    padding: 3px;
+                    &__listen{
+                        border-radius: 10px;
+                        border: 2px solid @inactive-color;
+                        background: @inactive-color;
+                    }
+                }
+            }
+        }
+    }
 }
