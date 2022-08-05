@@ -1,0 +1,94 @@
+.font-section{
+    position: relative;
+    padding-top: @padding-huge;
+    padding-bottom: @padding-huge;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__img{
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.font-box{
+    &__info{
+        max-width: 460px;
+        &-likes{
+            display: flex;
+            align-items: center;
+            padding-bottom: @padding-big;
+            &__img{
+                width: 30px;
+                height: 30px;
+                padding-right: @padding-small;
+            }
+        }
+        &-title{
+            color: @title2-color;
+            padding-bottom: @padding-middle;
+            line-height: 110%;
+            font-size: 2rem;
+        }
+    }
+
+    &__peoples{
+        padding-top: @container-horizontal-offset * 5;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        &-img{
+            width: 60px;
+            height: 60px;
+            margin-right: @padding-small;
+        }
+        &-line{
+            height: 30px;
+            border-right: 2px solid @inactive-color;
+        }
+        &-button{
+            padding: 0px @padding-small;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @media(max-width: 660px){
+            align-items: flex-start;
+        }
+        &-title{
+            text-transform: uppercase;
+            color: @inactive-color;
+            padding-bottom: @padding-tiny;
+        }
+        &-line{
+            border-bottom: 3px solid @inactive-color;
+            width: 130px;
+        }
+    }
+}
+
+.button-text{
+    background: none;
+    border: none;
+    color: @inactive-color;
+    font-size: 1.25rem;
+    transition: color 0.3s ease-out, color 0.3s ease-out;
+    &:hover{
+        color: @accent2-color;
+    }
+}
+
+.text-number{
+    font-size: 0.85rem;
+    color: @inactive-color;
+}

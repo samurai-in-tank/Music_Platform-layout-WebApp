@@ -1,0 +1,18 @@
+// _fonts.less
+// FONTS LOADING
+
+.font(@fname, @fstyle, @fweight, @furl) {
+	@font-face {
+		font-family: @fname;
+		font-style: @fstyle;
+		font-weight: @fweight;
+		src: url(@furl) format('woff2');
+	}
+}
+
+.font('Circe', normal, 100, '../assets/fonts/Circe-Thin.woff');
+.font('Circe', normal, 200, '../assets/fonts/Circe-ExtraLight.woff');
+.font('Circe', normal, 300, '../assets/fonts/Circe-Light.woff');
+.font('Circe', normal, 400, '../assets/fonts/Circe-Regular.woff');
+.font('Circe', normal, 700, '../assets/fonts/Circe-Bold.woff');
+.font('Circe', normal, 800, '../assets/fonts/Circe-ExtraBold.woff');

@@ -1,0 +1,65 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: @text-color;
+    
+    &-left{
+        &__box{
+            display: flex;
+            align-items: center;
+
+            &-logo{
+                display: flex;
+                align-items: center;
+                &__img{
+                    height: 75px;
+                    width: 75px;
+                }
+                &__title{
+                    font-size: 2rem;
+                }
+            }
+
+            &-button{
+                padding: 28px 24px;
+                transition: background 0.3s ease-out, color 0.3s ease-out;
+                &:hover{
+                    background-color: @accent-color;
+                    color: @title2-color;
+                }
+            }
+        }
+    }
+
+    &-right__box{
+        display: flex;
+        align-items: center;
+        &-img{
+            height: 60px;
+            width: 60px;
+        }
+
+        &-button{
+            height: 60px;
+            width: 60px;
+            border: none;
+            background: none;
+        }
+    }
+}
+
+.header-item{
+    margin-right:20px;
+}
+
+.circle-img{
+    object-fit: cover;
+    border-radius: 50%;
+    
+    &__border{
+        border: 1px solid #fff;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
