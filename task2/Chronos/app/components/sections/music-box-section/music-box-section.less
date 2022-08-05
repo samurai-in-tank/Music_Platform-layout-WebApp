@@ -6,16 +6,26 @@
     display: grid;
     padding: @padding-middle 0px;
     gap: @padding-middle;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 420px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     
     &__item{
+        min-height: 320px;
         position: relative;
         background: #fff;
         padding: @padding-middle;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        &-box{
+            flex: 1 0 auto;
+            position: relative;
+            z-index: 2;
+        }
 
         &-img{
             position: absolute;
-            z-index: -1;
+            z-index: 1;
             top: 0;
             bottom: 0;
             left: 0;
@@ -31,11 +41,12 @@
             padding-bottom: @padding-small;
         }
         &-footer{
+            position: relative;
+            z-index: 2;
+            flex: 0 0 auto;
             padding-top: @padding-huge;
-            &__people{
-                padding-bottom: @padding-small;
-            }
             &__music{
+                padding-top: @padding-small;
                 display: grid;
                 align-items: center;
                 gap: @padding-middle;
@@ -43,15 +54,14 @@
                 &-button{
                     border: none;
                     background: none;
-                    width: 40px;
-                    height: 40px;
+                    width: 30px;
+                    height: 30px;
                 }
                 &-audio{
                     display: grid;
                     grid-template-columns: 1fr 0.5fr;
                     border-radius: 10px;
                     border: 2px solid @inactive-color;
-                    background: @accent2-color;
                     padding: 3px;
                     &__listen{
                         border-radius: 10px;
