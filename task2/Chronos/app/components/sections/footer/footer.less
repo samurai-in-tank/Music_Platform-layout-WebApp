@@ -1,0 +1,62 @@
+.footer{
+    opacity: 0.6;
+    padding: @padding-middle;
+    background: #000;
+    color: @title2-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &-button{
+        width: 40px;
+        height: 40px;
+        color: @title2-color;
+        background: none;
+        border-radius: 50%;
+        padding: 10px;
+        border: 2px solid @inactive-color;
+        transition: background 0.3s ease-out, color 0.3s ease-out;
+        &:hover{
+            background: @accent2-color;
+            color: @title-color;
+        }
+    }
+    &-box{
+        &__line{
+            padding: 0px 2.5vw;
+            height: 1px;
+            border-radius: 10px;
+            border: 2px solid @inactive-color;
+            background: @inactive-color;
+            @media (max-width: 500px) {
+                display: none;
+            }
+        }
+        &__date{
+            &-zero{
+                width: 5px;
+                height: 5px;
+                padding: 5px;
+                border-radius: 50%;
+                border: 2px solid @inactive-color;
+                @media (max-width: 500px) {
+                    display: none;
+                }
+            }
+            &-number{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 2px solid @inactive-color;
+                text-align: center;
+                padding: 2px;
+            }
+            &-actually-date{
+                text-align: center;
+                padding: 5px 10px;
+                border-radius: 50px;
+                border: 2px solid @inactive-color;
+            }
+        }
+    }
+}
