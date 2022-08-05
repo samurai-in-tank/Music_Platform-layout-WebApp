@@ -1,3 +1,5 @@
-<h2>Project initialization:</h2>
-<p>npm i</p>
-<p>gulp</p>
+## Project initialization:
+```
+npm i
+gulp
+```
