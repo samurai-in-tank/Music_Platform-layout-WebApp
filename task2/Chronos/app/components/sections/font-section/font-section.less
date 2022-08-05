@@ -21,16 +21,6 @@
 .font-box{
     &__info{
         max-width: 460px;
-        &-likes{
-            display: flex;
-            align-items: center;
-            padding-bottom: @padding-big;
-            &__img{
-                width: 30px;
-                height: 30px;
-                padding-right: @padding-small;
-            }
-        }
         &-title{
             color: @title2-color;
             padding-bottom: @padding-middle;
@@ -75,20 +65,4 @@
             width: 130px;
         }
     }
-}
-
-.button-text{
-    background: none;
-    border: none;
-    color: @inactive-color;
-    font-size: 1.25rem;
-    transition: color 0.3s ease-out, color 0.3s ease-out;
-    &:hover{
-        color: @accent2-color;
-    }
-}
-
-.text-number{
-    font-size: 0.85rem;
-    color: @inactive-color;
 }
