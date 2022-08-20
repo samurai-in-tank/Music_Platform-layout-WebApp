@@ -1,0 +1,322 @@
+.button {
+    &-text{
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    &-setting{
+        border-radius: 6px;
+        border: none;
+        transition: all 0.5s;
+        position: relative;
+        &__fill{
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                opacity: 0;
+                transition: all 0.3s;
+                border-radius: 6px;
+                transform: scale(1.3,1.3);
+            }
+            &:hover::after{
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                border-radius: 6px;
+                transition: all 0.3s;
+            }
+            &:hover::before{
+                opacity: 0;
+                transform: scale(0.3,0.3);
+            }
+        }
+    }
+    
+    &__fill{
+        padding: @padding-small;
+        background: @button-3-color;
+        color: @text-2-color;
+        &:hover{
+            background: @accent-1-color;
+            color: @accent-2-color;
+        }
+    }
+    &__fill-img{
+        padding: @padding-small;
+        background: @button-1-color;
+        color: @text-3-color;
+        display: flex;
+        gap: @padding-tiny;
+        align-items: center;
+        &__img{
+            width: 30px;
+            height: 30px;
+            svg{
+                width: 100%;
+                height: 100%;
+                fill: @svg-2-color;
+            }
+            
+        }
+        &:hover{
+            background: none;
+            color: @button-1-color;
+            svg{
+                animation: like_scale 0.5s infinite linear;
+                fill: @accent-1-color;
+            }
+            p{
+                transform: scale(1.1);
+                color: @accent-1-color;
+            }
+        }
+        &::after{
+            border: 3px solid @button-1-color;
+        }
+        &::before{
+            border: 3px solid @button-1-color;
+        }
+    }
+
+    &__fill-red {
+        padding: @padding-big;
+        background: @button-1-color;
+        color: @text-3-color;
+        &:hover{
+            background: none;
+            color: @button-1-color;
+        }
+        &::after{
+            border: 3px solid @button-1-color;
+        }
+        &::before{
+            border: 3px solid @button-1-color;
+        }
+    }
+
+    &__fill-red__border {
+        padding: @padding-big;
+        border-radius: 6px;
+        background: none;
+        border: none;
+        color: @button-1-color;
+        transition: all 0.5s;
+        position: relative;
+        &:hover{
+            color: @accent-3-color;
+        }
+        &::after{
+            border: 3px solid @button-1-color;
+        }
+        &:hover::after{
+            border-color: @accent-3-color;
+        }
+        &::before{
+            border: 3px solid @button-1-color;
+        }
+        &:hover::before{
+            border-color: @accent-3-color;
+        }
+    }
+
+    &__fill-grey {
+        padding: @padding-small;
+        background: @button-2-color;
+        color: @text-3-color;
+        &:hover{
+            background: none;
+            color: @accent-4-color;
+        }
+        &::after{
+            border: 3px solid @button-2-color;
+        }
+        &::before{
+            border: 3px solid @button-2-color;
+        }
+    }
+
+    &__fill-grey__border {
+        padding: @padding-small;
+        background: none;
+        color: @button-5-color;
+        &:hover{
+            color: @accent-2-color;
+        }
+        &::after{
+            border: 3px solid @button-5-color;
+        }
+        &:hover::after{
+            border-color: @accent-2-color;
+        }
+        &::before{
+            border: 3px solid @button-5-color;
+        }
+        &:hover::before{
+            border-color: @accent-2-color;
+        }
+    }
+
+    &__link{
+        &-tiny{
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border: none;
+            color: @button-5-color;
+            background: none;
+            transition-duration: .3s;
+            &:hover{
+                color: @accent-3-color;
+                transform: scale(1.1);
+            }
+        }
+        &-small{
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            border: none;
+            color: @button-4-color;
+            background: none;
+            transition-duration: .3s;
+            &:hover{
+                color: @accent-3-color;
+                transform: scale(1.1);
+            }
+            
+            &-2{
+                font-size: 0.8rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+                border: none;
+                color: @accent-2-color;
+                background: none;
+                transition-duration: .3s;
+                &:hover{
+                    color: @accent-2-color;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        &-middle{
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border: none;
+            color: @button-5-color;
+            background: none;
+            transition-duration: .3s;
+            &:hover{
+                color: @accent-2-color;
+                transform: scale(1.1);
+            }
+        }
+        &-big{
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border: none;
+            background: none;
+            color: @button-3-color;
+            transition-duration: .3s;
+            &:hover{
+                color: @accent-1-color;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    &__img{
+        display: flex;
+        align-items: center;
+        background: none;
+        gap: @padding-small;
+        border: none;
+        transition-duration: .3s;
+        &-text{
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: @button-2-color;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-out, color 0.3s ease-out;
+        }
+        &-img{
+            width: 30px;
+            height: 30px;
+        }
+        svg{
+            fill: @svg-3-color;
+        }
+        &:hover{
+            svg{
+                animation: like_scale 0.5s infinite linear;
+                fill: @accent-1-color;
+            }
+            p{
+                transform: scale(1.1);
+                color: @accent-1-color;
+            }
+        }
+    }
+
+    &__sort{
+        display: flex;
+        align-items: center;
+        background: none;
+        gap: @padding-small;
+        border: none;
+        transition-duration: .3s;
+        &-text{
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: @button-5-color;
+            letter-spacing: 1px;
+            transition: color 0.3s ease-out, color 0.3s ease-out;
+        }
+        &-img{
+            width: 24px;
+            height: 24px;
+            display: none;
+        }
+        svg{
+            fill: @svg-3-color;
+        }
+        &:hover{
+            div{
+                display: block;
+            }
+            svg{
+                fill: @accent-4-color;
+                animation: like_scale 0.5s infinite linear;
+            }
+            p{
+                font-weight: 800;
+                color: @accent-4-color;
+            }
+        }
+    }
+}
+
+@keyframes like_scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+}

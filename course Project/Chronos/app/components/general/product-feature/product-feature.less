@@ -1,0 +1,39 @@
+.product-feature{
+    svg{
+        fill: @svg-2-color;
+    }
+    position: relative;
+    display: flex;
+
+    &__circle{
+        background: #000;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(2){
+            position: absolute;
+            left: 26px;
+        }
+        &:nth-child(3){
+            position: absolute;
+            left: 56px;
+        }
+        &-green{
+            background: @feature-1-color;
+        }
+        &-red{
+            background: @feature-3-color;
+        }
+        &-blue{
+            
+            background: @feature-2-color;
+        }
+        &-item{
+            width: 22px;
+            height: 22px;
+        }
+    }
+}

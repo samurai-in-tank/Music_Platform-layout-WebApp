@@ -1,0 +1,68 @@
+.advertising{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: @padding-huge;
+    @media  (max-width: 400px){
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    &-box{
+        position: relative;
+        background: @card-4-color;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        &__img{
+            position: absolute;
+        }
+    }
+    &__text-box{
+        position: relative;
+        z-index: 1;
+        display: grid;
+        gap: 10px;
+        padding: @padding-huge;
+
+        &__title{
+            font-size: 1.7rem;
+            color: @text-3-color;
+        }
+        &__title-2{
+            padding: @padding-huge 0px;
+            font-size: 1.7rem;
+            color: @text-2-color;
+            &-text-2{
+                color: @accent-1-color;
+                font-weight: 700;
+            }
+        }
+        &__img{
+            width: 160px;
+            height: 60px;
+        }
+        &__container{
+            display: flex;
+            align-items: center;
+            &-img{
+                width: 100px;
+                height: 100px;
+                @media (max-width: 400px) {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            &-text{
+                display: grid;
+                font-weight: 400;
+                font-size: 1.1rem;
+                color: @text-2-color;
+                &__weight{
+                    font-weight: 800;
+                    font-size: 1.1rem;
+                    color: @text-2-color;
+                }
+            }
+        }
+    }
+    &__img-box{
+
+    }
+}

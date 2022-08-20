@@ -1,0 +1,59 @@
+.shop-item{
+    background: @card-1-color;
+    overflow: hidden;
+    &__img{
+        position: relative;
+        overflow: hidden;
+        height: 270px;
+
+        &-box{
+            position: relative;
+            z-index: 1;
+            padding: @padding-small;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            &__item{
+                display: flex;
+                gap: 8px;
+                &-svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        &-img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+        }
+    }
+
+    &__description{
+        position: relative;
+        
+        &-box{
+            display: grid;
+            gap: @padding-tiny;
+            padding: @padding-big;
+            &__item{
+                &__bonus-item{
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: @padding-small;
+                }
+                &__footer{
+                    padding-top: @padding-small;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}

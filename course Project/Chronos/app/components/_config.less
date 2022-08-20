@@ -1,9 +1,5 @@
 // _config.less
 // GENERAL CSS CONFIG
-
-::selection {
-	color: #fff;
-}
 	
 * {
     font-family: @user-font;
@@ -33,7 +29,6 @@ p {
 
 a {
     text-decoration: none;
-	color: @text2-color;
 }
 
 input {
@@ -47,12 +42,13 @@ ul {
 
 .page {
 	width: 100%;
-    min-width: 320px;
+    min-width: 280px;
 	position: relative;
 	overflow-x: hidden;
 }
 
 .main {
+	background-color: @body-color;
     width: 100%;
 	margin: 0;
 	overflow: hidden;
@@ -68,31 +64,15 @@ ul {
 	margin: auto;
 	padding: 0px @container-horizontal-offset;
     box-sizing: border-box;
-
     &_small {
         max-width: calc(872px + @container-horizontal-offset * 2);
     }	
 }
 
 .box-shadow{
+    overflow: hidden;
     border-radius: 10px;
 	box-shadow: @card-shadow;
-}
-
-.background-img{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: -1;
-	filter: blur(10px);
-	object-fit: cover;
-}
-
-.section-padding{
-	padding: @padding-huge 0px;
-	@media (max-width: 1290px) {
-		padding: 0px 0px;
-	}
 }
 
 .full-img{

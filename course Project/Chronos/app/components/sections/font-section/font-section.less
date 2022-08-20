@@ -1,0 +1,59 @@
+.banner{
+    &-box{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (max-width: 550px) {
+            background: @card-2-color;
+            grid-template-columns: 1fr;    
+        }
+        
+        &__img{
+            position: absolute;
+            width: 800px;
+            left: 35%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            @media (max-width: 1050px){
+                width: 100%;
+                left: 0;
+            }
+            @media (max-width: 550px){
+                display: none;
+            }
+        }
+    }
+    &__text-box{
+        position: relative;
+        &__img{
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100% + @container-horizontal-offset * 2;
+            @media (max-width: 550px){
+                display: none;
+            }
+        }
+        &__container{
+            position: relative;
+            z-index: 2;
+            padding: @padding-huge * 2;
+            &-title{
+                padding: @padding-huge 0px;
+                display: grid;
+                text-transform: uppercase;
+                color: @accent-1-color;
+                &__text{
+                    text-transform: lowercase;
+                    color: @accent-2-color;
+                }
+            }
+        }
+    }
+}

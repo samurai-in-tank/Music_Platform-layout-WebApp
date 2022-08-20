@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Application</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="images/favicon.png">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+<body class="page" id="page">
+	<main class="page__main main" id="page_main">
+		<!--#include virtual="/components/sections/shop-section/shop-section.html" -->
+		<!--#include virtual="/components/sections/footer/footer.html" -->
+	</main>
+	<script src="js/app.min.js"></script>
+	<script>
+        function Show_And_Hide(name1, name2) {
+            const block = document.getElementById(name1);
+            const block_none = document.getElementById(name2);
+            if (name1) {
+                block_none.style.cssText = "display: none;";
+                block.style.cssText = "display: block";
+            }
+        }
+		function Show_Block(name) {
+			const screenWidth = window.screen.width;
+			if(screenWidth >= 650){
+				return
+			}
+            const block = document.getElementById(name);
+			var display  = ['grid','none'];
+            if (block.style.display != display[1]) {
+                block.style.display = display[1];
+				block.style.paddingLeft = '20px';
+            }
+			else{
+				block.style.display = display[0];
+			}
+        }
+
+		document.addEventListener('DOMContentLoaded', () => {
+			const button = document.querySelector('.header__button');
+			const nav = document.querySelector('.nav');
+
+			button.addEventListener('click', () => {
+				nav.classList.toggle('nav_active')
+			})
+
+			window.addEventListener('click', e => {
+			const target = e.target;
+			if (!target.closest('.nav') && !target.closest('.header__button')) {
+				nav.classList.remove('nav_active');
+			}
+			})
+
+		})
+    </script>
+</body>
+</html>
