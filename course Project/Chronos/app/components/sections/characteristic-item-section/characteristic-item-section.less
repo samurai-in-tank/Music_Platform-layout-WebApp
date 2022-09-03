@@ -21,6 +21,13 @@
                 height: 70px;
                 background: none;
                 border: none;
+                font-size: 3rem;
+                color: @button-3-color;
+                transition-duration: .3s;
+                &:hover{
+                    color: @button-1-color;
+                    transform: scale(1.2);
+                }
             }
             &-button{
                 width: 70px;
@@ -127,6 +134,7 @@
                 }
                 &__pay{
                     display: flex;
+                    flex-wrap: wrap;
                     gap: @padding-big;
                     align-items: center;
                     &-box{
