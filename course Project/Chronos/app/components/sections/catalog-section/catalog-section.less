@@ -1,10 +1,9 @@
 .catalog{
     margin-top: @sections-offset-big;
     margin-bottom: @sections-offset-big;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: @padding-huge;
-    justify-content: center;
     &-item{
         display: flex;
         gap: @padding-huge;
