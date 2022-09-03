@@ -1,0 +1,23 @@
+.catalog{
+    margin-top: @sections-offset-big;
+    margin-bottom: @sections-offset-big;
+    display: flex;
+    flex-wrap: wrap;
+    gap: @padding-huge;
+    justify-content: center;
+    &-item{
+        display: flex;
+        gap: @padding-huge;
+        align-items: center;
+        padding: @padding-huge;
+        &__img{
+            width: 50px;
+            height: 50px;
+        }
+        &__title{
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: @text-2-color;
+        }
+    }
+}

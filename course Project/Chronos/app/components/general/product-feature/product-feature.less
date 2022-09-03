@@ -1,12 +1,22 @@
 .product-feature{
+    position: relative;
+    display: flex;
+    gap: @padding-small;
     svg{
         fill: @svg-2-color;
     }
-    position: relative;
-    display: flex;
-
+    &__box{
+        display: grid;
+        gap: @padding-small;
+        justify-items: center;
+    }
+    &__text{
+        font-weight: 900;
+        font-size: .65rem;
+        color: @text-2-color;
+        text-transform: uppercase;
+    }
     &__circle{
-        background: #000;
         border-radius: 50%;
         width: 36px;
         height: 36px;
@@ -34,6 +44,14 @@
         &-item{
             width: 22px;
             height: 22px;
+        }
+        &-big{
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

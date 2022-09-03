@@ -10,14 +10,18 @@
 </head>
 <body class="page" id="page">
 	<main class="page__main main" id="page_main">
+		<!--#include virtual="/components/sections/header/header.html" -->
+		<!--#include virtual="/components/sections/page-header/page-header.html" -->
+		<!--#include virtual="/components/sections/font-section/font-section.html" -->
 		<!--#include virtual="/components/sections/shop-section/shop-section.html" -->
+		<!--#include virtual="/components/sections/view-section/view-section.html" -->
 		<!--#include virtual="/components/sections/footer/footer.html" -->
 	</main>
 	<script src="js/app.min.js"></script>
 	<script>
         function Show_And_Hide(name1, name2) {
-            const block = document.getElementById(name1);
-            const block_none = document.getElementById(name2);
+            var block = document.getElementById(name1);
+            var block_none = document.getElementById(name2);
             if (name1) {
                 block_none.style.cssText = "display: none;";
                 block.style.cssText = "display: block";
@@ -38,7 +42,7 @@
 				block.style.display = display[0];
 			}
         }
-
+		/*
 		document.addEventListener('DOMContentLoaded', () => {
 			const button = document.querySelector('.header__button');
 			const nav = document.querySelector('.nav');
@@ -55,6 +59,7 @@
 			})
 
 		})
+		*/
     </script>
 </body>
 </html>
