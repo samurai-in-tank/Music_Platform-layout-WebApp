@@ -1,9 +1,9 @@
 {
-	"name": "padme-html-template",
+	"name": "Music_Platform_HTML-CSS",
 	"version": "1.0.0",
-	"description": "Padme Html Template - Gulp Web Starter",
+	"description": "",
 	"main": "index.js",
-	"author": "sofulle",
+	"author": "CamyrauBTanke",
 	"license": "MIT",
 	"scripts": {
 		"start": "gulp",
